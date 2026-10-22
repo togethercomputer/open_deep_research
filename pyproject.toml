@@ -62,3 +62,7 @@ pytest-asyncio = "^0.18.0"
 
 [dependency-groups]
 dev = ["ruff>=0.11.2"]
+
+[tool.uv]
+# gradio caps pillow<13, but all pillow CRITICAL/HIGH advisories are fixed only in 13.0.0
+override-dependencies = ["pillow>=13.0.0"]
